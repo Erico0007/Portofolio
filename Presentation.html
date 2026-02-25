@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric  Ekra | Web Designer & Analyst</title>
+    <link rel="stylesheet" href="Style/Styles.css" />
+</head>
+
+<body>
+
+    <!-- LANGUAGE SWITCHER -->
+  <div class="language-switcher">
+    <a href="Presentation.html">English</a> | 
+    <a href="Presentation(French).html">Français</a>
+</div>
+
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+         
+            <h1 class="logo">Eric<span>Ekra</span></h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-text">
+            <h2>Modern Web Design & Digital Strategy</h2>
+            <p>
+                I’m Eric  Ekra — a web designer and analyst based in Montreal.
+                I create clean, modern, and user‑focused digital experiences that blend creativity,
+                data, and strategy.
+            </p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-grid">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <h3>RDL Touch</h3>
+                <p>
+                    A modern and responsive website designed for a beauty and braiding brand.
+                    The project includes bilingual pages, TikTok video integration,
+                    a booking system, and a clean, user‑friendly interface.
+                </p>
+
+                <p>
+                    Live Preview:
+                    <a href="http://127.0.0.1:5501/Doc-fr.html" target="_blank">View Website</a>
+                </p>
+
+                <p>
+                    GitHub Repository:
+                    <a href="https://github.com/Erico0007/RDL.Braids-WebProject/tree/main" target="_blank">
+                        RDL Touch on GitHub
+                    </a>
+                </p>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <h3>Basic Online Store</h3>
+                <p>
+                    SYSTEMSTORES is a modern, responsive online shopping interface designed to showcase products,
+                    offer a smooth browsing experience, and support multilingual content.
+                </p>
+
+                <p>
+                    Live Preview:
+                    <a href="http://127.0.0.1:5502/OnlineStore/OnlineStore.html" target="_blank">View Website</a>
+                </p>
+
+                <p>
+                    GitHub Repository:
+                    <a href="https://github.com/Erico0007/Web_Projects-update/tree/main" target="_blank">
+                        Online Store on GitHub
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <h2 class="section-title">About</h2>
+        <p>
+            I am Arnaud Eric Ekra, a bilingual analyst and IT professional with a passion for clean,
+            functional design. My academic background in Information Technology at McGill University
+            allows me to create digital experiences that are visually appealing, technically solid,
+            and aligned with real user needs.
+        </p>
+        <p>
+            I prioritize clarity, usability, and impact — whether I’m designing a homepage,
+            building a dashboard, or simplifying technical content.
+        </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>If you’d like to collaborate or discuss a project, feel free to reach out.</p>
+
+        <ul class="contact-info">
+            <li>Email: <a href="mailto:ericarnaud07@outlook.com">ericarnaud07@outlook.com</a></li>
+            <li>LinkedIn: 
+                <a href="https://www.linkedin.com/in/arnaud-eric-ekra-b7827645/" target="_blank">
+                    LinkedIn Profile
+                </a>
+            </li>
+            <li>GitHub: 
+                <a href="https://github.com/Erico0007" target="_blank">My GitHub</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Arnaud Ekra — All Rights Reserved</p>
+    </footer>
+
+    <!-- LANGUAGE SCRIPT -->
+    <script>
+        const translations = {
+            fr: {
+                hero_title: "Design Web Moderne & Stratégie Digitale",
+                hero_desc: "Je suis Arnaud Ekra — designer web et analyste basé à Montréal. Je crée des expériences digitales modernes, épurées et centrées sur l’utilisateur.",
+                hero_btn: "Voir mes projets",
+
+                nav_home: "Accueil",
+                nav_projects: "Projets",
+                nav_about: "À propos",
+                nav_contact: "Contact"
+            },
+
+            en: {
+                hero_title: "Modern Web Design & Digital Strategy",
+                hero_desc: "I’m Arnaud Ekra — a web designer and analyst based in Montreal. I create clean, modern, and user‑focused digital experiences that blend creativity, data, and strategy.",
+                hero_btn: "View My Work",
+
+                nav_home: "Home",
+                nav_projects: "Projects",
+                nav_about: "About",
+                nav_contact: "Contact"
+            }
+        };
+
+        let currentLang = "en";
+
+        document.getElementById("lang-switch").addEventListener("click", () => {
+            currentLang = currentLang === "en" ? "fr" : "en";
+            document.getElementById("lang-switch").textContent = currentLang === "en" ? "FR" : "EN";
+
+            document.querySelectorAll("[data-key]").forEach(el => {
+                const key = el.getAttribute("data-key");
+                el.textContent = translations[currentLang][key];
+            });
+        });
+    </script>
+
+</body>
+</html>
